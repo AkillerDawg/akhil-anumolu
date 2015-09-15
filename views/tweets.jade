@@ -1,0 +1,6 @@
+extends layout
+block content
+  #map(style='width: 800px; height: 600px')
+  script window.tweets = !{JSON.stringify(tweets)};
+  script(src='/public/tweets.js')
+  script(async, defer, src!='https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&signed_in=true&callback=init')
